@@ -72,12 +72,9 @@
 				<div class="content content--layout content--layout-3">
 					<svg class="content__img content__img--3" width="1000" height="560" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 560">
 					  <defs>
-					    <filter id="displacementFilter3">
-					      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" result="noise" />
-					      <feDisplacementMap in="SourceGraphic" in2="noise" scale="80" result="displacement" xChannelSelector="R" yChannelSelector="G" />
-					    </filter>
+					    
 					    <mask id="pathMask">
-							<path d="M 0 280 Q 500 280 1000 280 Q 500 280 0 280" data-value-final="M 0 280 Q 500 800 1000 280 Q 500 -200 0 280" fill="white" class="mask" style="filter: url(#displacementFilter3);"/>
+							<path d="M 0 280 Q 500 280 1000 280 Q 500 280 0 280" data-value-final="M 0 280 Q 500 800 1000 280 Q 500 -200 0 280" fill="white" class="mask" />
 					    </mask>
 					  </defs>
 					  <image xlink:href="img/3.jpg" width="1000" height="560" mask="url(#pathMask)" />
