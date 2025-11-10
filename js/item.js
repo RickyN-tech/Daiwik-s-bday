@@ -65,7 +65,7 @@ export class Item {
         }, {
             ease: 'none',
             scale: isCircle ? 1.2 : 1,
-            filter: 'brightness(150%)'
+            filter: 'brightness(100%)'
         }, 0);
         
 
