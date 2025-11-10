@@ -5,12 +5,18 @@ import { Item } from './item.js';
 // Define a variable to store Lenis smooth scrolling object
 let lenis;
 
+// Mobile performance optimization
+const isMobile = window.innerWidth <= 768;
+
 // Function to initialize Lenis for smooth scrolling
 const initSmoothScrolling = () => {
 	// Instantiate the Lenis object with specified properties
 	lenis = new Lenis({
-		lerp: 0.1, // Lower values create a smoother scroll effect
-		smoothWheel: true // Enables smooth scrolling for mouse wheel events
+		lerp: isMobile ? 0.2 : 0.1, // Higher lerp for mobile for smoother performance
+		smoothWheel: true, // Enables smooth scrolling for mouse wheel events
+		// Mobile optimizations
+		syncTouch: isMobile ? true : false,
+		touchMultiplier: isMobile ? 1.5 : 1,
 	});
 
 	// Update ScrollTrigger each time the user scrolls

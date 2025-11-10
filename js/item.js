@@ -69,6 +69,9 @@ export class Item {
         }, 0);
         
 
+        // Mobile performance optimization
+        const isMobile = window.innerWidth <= 768;
+        
         ScrollTrigger.create({
             trigger: this.DOM.titleWrap,
             ease: 'none',
@@ -76,6 +79,9 @@ export class Item {
             end: '+=40%',
             scrub: true,
             animation: flip,
+            // Reduce performance impact on mobile
+            fastScrollEnd: isMobile ? true : false,
+            preventOverlaps: isMobile ? true : false,
         });
     }
 }
